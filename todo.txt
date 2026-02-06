@@ -3,3 +3,4 @@
 3. Create README.md
 4. Create start file
 5. Maybe create arg parser
+6. Maybe add speedup function
