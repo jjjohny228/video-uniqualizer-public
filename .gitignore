@@ -1,0 +1,32 @@
+# My custom files
+bottom_videos/background_videos/*
+result/*
+source_video/*
+source_text/*
+temp/*
+source.txt
+test/*
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# IDE specific files
+.idea/
+.vscode/
+
+bottom_videos
+result_videos
+source_videos
+
