@@ -1,0 +1,5 @@
+1. Clean up code
+2. Add subtitles
+3. Create README.md
+4. Create start file
+5. Maybe create arg parser
