@@ -2,7 +2,7 @@ from uuid import uuid4
 from openai import OpenAI
 from utils.time_formatter import format_time
 
-from config import logger
+from config import logger, Config
 
 
 def subtitles_from_audio(file: str) -> str:
@@ -24,19 +24,8 @@ def subtitles_from_audio(file: str) -> str:
         words = transcript_dict.get("words", [])
         
         logger.info(f"Transcribed {len(words)} words")
-
-        ass_header = """[Script Info]
-Title: Generated ASS file
-ScriptType: v4.00+
-
-
-[V4+ Styles]
-Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial Black,20,&H0000FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,5,0,0,0,1
-
-[Events]
-Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-"""
+        with open(Config.ASS_HEADER_PATH, 'r') as ass_file:
+            ass_header = ass_file.read()
 
         subtitles = [ass_header]
 

@@ -40,7 +40,8 @@ def trim_video(input_file: str, duration: int, start_time: Optional[int] = None,
 
     try:
         subprocess.run(command, check=True, capture_output=True)
-        logger.debug(f"Trimmed video: {input_file} -> {output_file} (start: {video_start_time}s, duration: {duration}s)")
+        logger.debug(f"Trimmed video: {input_file} -> {output_file} (start: {video_start_time}s, "
+                     f"duration: {duration}s)")
         return output_file
     except subprocess.CalledProcessError as e:
         logger.error(f"Error trimming video {input_file}: {e}")
@@ -61,7 +62,7 @@ def combine_videos(source_video: str, background_video: str, target_folder: str)
         '-i', trimmed_bottom_video,
         '-filter_complex',
         '[0:v]crop=min(iw\,ih):min(iw\,ih):(iw-min(iw\,ih))/2:(ih-min(iw\,ih))/2,scale=1080:960[v1];'
-        f'[1:v]crop=min(iw\,ih):min(iw\,ih):(iw-min(iw\,ih))/2:(ih-min(iw\,ih))/2,scale=1080:960[v2];'
+        '[1:v]crop=min(iw\,ih):min(iw\,ih):(iw-min(iw\,ih))/2:(ih-min(iw\,ih))/2,scale=1080:960[v2];'
         '[v1][v2]vstack=inputs=2[v]',
         '-map', '[v]',
         '-map', '0:a?',

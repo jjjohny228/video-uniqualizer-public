@@ -1,0 +1,14 @@
+line-length = 120
+target-version = "py311"
+lint.select = ["PL", "E", "F"] # Enable Pylint rules and basic error groups
+
+exclude = [
+    ".git",
+    ".ruff_cache",
+    "build",
+    "dist",
+    "node_modules",
+    "*migrations/*.py",
+    ".venv",
+    "__pycache__",
+]
