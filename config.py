@@ -22,7 +22,7 @@ class Config:
     SOURCE_FOLDER = 'source_videos'
     TEMP_FOLDER = 'temp'
 
-    ASS_HEADER_PATH = 'ass_header.txt'
+    ASS_HEADER_PATH = 'resource/ass_header.txt'
 
     ADD_SUBTITLES = os.getenv('ADD_SUBTITLES').lower() in ('true', '1', 'yes', 'on')
 

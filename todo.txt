@@ -1,3 +1,4 @@
-2. Create README.md
-3. Create start file
-4. Maybe add speedup function
+1. Create README.md
+2. Create start file
+3. Maybe add speedup function
+4. Create bot for lazy people to unique their videos using subscription (based on minutes) and payment via crypto
