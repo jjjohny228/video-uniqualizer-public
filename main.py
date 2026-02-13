@@ -55,6 +55,9 @@ def process_videos(add_subtitles: bool = True) -> None:
                 else:
                     shutil.move(combined_video, final_output)
                     logger.error(f"Failed to extract audio from {combined_video}")
+            else:
+                print(combined_video)
+                shutil.move(combined_video, final_output)
 
             if os.path.exists(combined_video):
                 os.remove(combined_video)
