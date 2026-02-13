@@ -1,91 +1,65 @@
-# Tiktok video uniqualizer
-This app automatically makes your videos unique for YouTube, TikTok, and Instagram by adding dynamic gameplay footage to the bottom part of the screen.
-<br>You can mix in Fortnite, Subway Surfers, Minecraft, and other games to boost viewer retention and reduce the risk of being flagged as reused content
+# 🎮 **VideoGame Overlay** ⭐
 
-![Original.png](Original.png)
+**Make ANY video unique** for YouTube, TikTok & Instagram by adding **live gameplay** to the bottom screen!
 
-## Dependencies
-1. Python 3.14
-2. Uv
-3. Ffmpeg
+<div align="center">
+  <img src="resource/Original.png" width="60%">
+</div>
 
-## Setup Instructions (quick one)
-1. **Clone the Repository**
+## ✨ **Features**
+- 🎯 **Automatically** overlays gameplay on the bottom of your videos
+- 🕹️ **Games**: Fortnite, Subway Surfers, Minecraft + custom videos
+- 📱 **Platforms**: YouTube Shorts, TikTok, Instagram Reels
+- ⚡ **FFmpeg-powered** — fast & high quality
+- 🤖 **Optional subtitles** (OpenAI integration)
 
-```
+## 🚀 **Quick Setup (30 seconds)**
+
+```bash
 git clone https://github.com/jjjohny228/video-uniqualizer-public.git
 cd video-uniqualizer-public
+
+# Linux/macOS
+chmod +x *.sh && ./setup.sh
+
+# Windows  
+setup.bat
 ```
 
-2. **Run script**
-```
-setup.bash # Linux, MacOS
-setup.bat # Windows
-```
+## 📁 **How to Use**
 
-## Setup Instructions (long one)
-1. **Clone the Repository**
-
-2. **Clone the Repository**
+1. **Download game videos** → put in `bottom_videos/`
+2. **Configure `.env`** (OpenAI key for subtitles)
+3. Put source videos into [source_videos](source_videos)
+3. **Run** → get unique videos!
 
 ```
-git clone https://github.com/jjjohny228/video-uniqualizer-public.git
-cd video-uniqualizer-public
+macOS/Linux:  macos_start.command (double-click)
+Windows:      windows_start.bat (double-click)
+CLI:          uv run python main.py
 ```
 
-3. **Download uv**
-
+## 🎯 **Why Use It?**
 ```
-curl -LsSf https://astral.sh/uv/install.sh | less # macOS/Linux
-PS> powershell -c "irm https://astral.sh/uv/install.ps1 | more" # Windows
-```
-
-4. **Download ffmpeg**
-
-5. **Install python using uv**
-
-```
-uv python install 3.14
+❌ Regular video → YouTube: "Reused content" strike
+✅ With gameplay → ✅ Unique + High retention
 ```
 
-6. **Create .venv and activate virtual environment**
+## 🔧 **Development**
 
-```
-uv venv --python 314
-source .venv/bin/activate # macOS/Linux
-.venv\Scripts\activate # Windows
-```
+```bash
+# Linting
+uv run ruff check .
+uv run ruff check . --fix
 
-7. **Copy .env.example and create .env file**
-
-```
-cp .env.example .env
+# Run dev server
+uv run python main.py
 ```
 
-8. **Install dependencies**
+## 🤝 **Support the Project**
+⭐ **Star this repo** — helps a lot!  
+🐛 **Issues** — bugs/features  
+💬 **Discord** — questions
 
-```
-uv sync --forzen
-```
-
-## How to use
-1. Download game videos and put them to the bottom_videos folder. Here is a link to get test videos.
-url
-
-2. Setup subtitles variables
-If you want to add subtitles get open ai api key and put it in .env file. Also change ADD_SUBTITLES to True
-
-3. Start program.
-Double click macos_start.command for macOS and Linux.
-Double click windows_start.ps1 for windows.
-Or just run 
-```
-uv run main.py
-```
-
-## Linting and formatting
-
-```
-ruff check .  # to check Python linting issues
-ruff check . --fix  # try fix Python linting issues
-```
+---
+#Python #YouTube #TikTok #VideoEditing #GameplayOverlay
