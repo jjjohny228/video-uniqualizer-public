@@ -61,8 +61,8 @@ def combine_videos(source_video: str, background_video: str, target_folder: str)
         '-i', source_video,
         '-i', trimmed_bottom_video,
         '-filter_complex',
-        '[0:v]crop=min(iw\,ih):min(iw\,ih):(iw-min(iw\,ih))/2:(ih-min(iw\,ih))/2,scale=1080:960[v1];'
-        '[1:v]crop=min(iw\,ih):min(iw\,ih):(iw-min(iw\,ih))/2:(ih-min(iw\,ih))/2,scale=1080:960[v2];'
+        '[0:v]crop=min(iw\,ih):min(iw\,ih):(iw-min(iw\,ih))/2:(ih-min(iw\,ih))/2,scale=1080:960,fps=30[v1];'
+        '[1:v]crop=min(iw\,ih):min(iw\,ih):(iw-min(iw\,ih))/2:(ih-min(iw\,ih))/2,scale=1080:960,fps=30[v2];'
         '[v1][v2]vstack=inputs=2[v]',
         '-map', '[v]',
         '-map', '0:a?',

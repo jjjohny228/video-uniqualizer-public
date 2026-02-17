@@ -1,4 +1,3 @@
-1. Updated README.md
-2. Test windows start file
-3. Maybe add speedup function
-4. Create bot for lazy people to unique their videos using subscription (based on minutes) and payment via crypto
+1. Test windows start file
+2. Maybe add speedup function
+3. Create bot for lazy people to unique their videos using subscription (based on minutes) and payment via crypto
